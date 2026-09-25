@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Tetris Retro"
+    >
+
+    <title>TETRIS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game">
+
+        <!-- CABEÇALHO -->
+        <header class="header">
+
+            <div class="logo">
+
+                <span class="logo-t">T</span>
+                <span class="logo-e">E</span>
+                <span class="logo-t2">T</span>
+                <span class="logo-r">R</span>
+                <span class="logo-i">I</span>
+                <span class="logo-s">S</span>
+
+            </div>
+
+            <div class="subtitle">
+                RETRO EDITION
+            </div>
+
+        </header>
+
+
+        <!-- ÁREA DO JOGO -->
+        <section class="game-layout">
+
+
+            <!-- PAINEL ESQUERDO -->
+            <aside class="side-panel left-panel">
+
+
+                <div class="panel">
+
+                    <div class="panel-title">
+                        SCORE
+                    </div>
+
+                    <div
+                        id="score"
+                        class="panel-value"
+                    >
+                        000000
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-title">
+                        LINES
+                    </div>
+
+                    <div
+                        id="lines"
+                        class="panel-value"
+                    >
+                        000
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-title">
+                        LEVEL
+                    </div>
+
+                    <div
+                        id="level"
+                        class="panel-value"
+                    >
+                        01
+                    </div>
+
+                </div>
+
+
+                <div class="panel mini-panel">
+
+                    <div class="panel-title">
+                        HIGH SCORE
+                    </div>
+
+                    <div
+                        id="highScore"
+                        class="panel-value"
+                    >
+                        000000
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+            <!-- TABULEIRO -->
+            <div class="board-wrapper">
+
+                <div class="board-frame">
+
+                    <canvas
+                        id="gameCanvas"
+                        width="300"
+                        height="600"
+                    ></canvas>
+
+                    <!-- OVERLAY -->
+                    <div
+                        id="gameMessage"
+                        class="game-message hidden"
+                    >
+
+                        <div class="message-box">
+
+                            <h2 id="messageTitle">
+                                GAME OVER
+                            </h2>
+
+                            <p id="messageText">
+                                PRESSIONE ENTER
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAINEL DIREITO -->
+            <aside class="side-panel right-panel">
+
+
+                <div class="panel next-panel">
+
+                    <div class="panel-title">
+                        NEXT
+                    </div>
+
+                    <canvas
+                        id="nextCanvas"
+                        width="120"
+                        height="120"
+                    ></canvas>
+
+                </div>
+
+
+                <div class="panel controls">
+
+                    <div class="panel-title">
+                        CONTROLS
+                    </div>
+
+                    <div class="control">
+                        <span>A / ←</span>
+                        <span>LEFT</span>
+                    </div>
+
+                    <div class="control">
+                        <span>D / →</span>
+                        <span>RIGHT</span>
+                    </div>
+
+                    <div class="control">
+                        <span>S / ↓</span>
+                        <span>DOWN</span>
+                    </div>
+
+                    <div class="control">
+                        <span>W / ↑</span>
+                        <span>ROTATE</span>
+                    </div>
+
+                    <div class="control">
+                        <span>SPACE</span>
+                        <span>DROP</span>
+                    </div>
+
+                    <div class="control">
+                        <span>P</span>
+                        <span>PAUSE</span>
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </section>
+
+
+        <!-- MENU -->
+        <section
+            id="menu"
+            class="menu"
+        >
+
+            <div class="menu-title">
+                TETRIS
+            </div>
+
+            <div
+                id="menuText"
+                class="menu-text"
+            >
+                PRESS ENTER TO START
+            </div>
+
+        </section>
+
+
+        <!-- BOTÕES -->
+        <div class="buttons">
+
+            <button id="startButton">
+                START
+            </button>
+
+            <button id="pauseButton">
+                PAUSE
+            </button>
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+        <footer>
+
+            <span>
+                TETRIS RETRO EDITION
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                10 × 20
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
